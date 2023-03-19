@@ -1,0 +1,104 @@
+@mixin font-lato-12 {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  font-style: normal;
+}
+
+
+@mixin font-lato-small {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+}
+
+@mixin font-lato-normal {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+@mixin font-oswald-small {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: normal;
+}
+
+@mixin font-oswald-normal {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+}
+
+@mixin font-oswald-18 {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+@mixin font-oswald-big {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  font-style: normal;
+}
+
+@mixin font-oswald-24 {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  font-style: normal;
+}
+
+@mixin font-oswald-bold {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  font-style: normal;
+}
+
+@mixin font-oswald-large {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+  font-style: normal;
+}
+
+@mixin media-mobile-only {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-middle {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

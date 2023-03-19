@@ -1,0 +1,56 @@
+@use "../global/use.scss";
+
+.main-header {
+  @include use.media-mobile-only {
+    margin-bottom: 20px;
+  }
+
+  @include use.media-desktop {
+    position: relative;
+    min-height: 694px;
+    margin-bottom: 82px;
+
+    &--index::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -4px;
+      width: 50%;
+      min-height: 697px;
+      background-color: rgba(104, 183, 56, 0.85);
+      z-index: 2;
+    }
+
+    &--index::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: 0;
+      width: 50%;
+      height: 697px;
+      background-image: url("../img/web-desk-main-cat.webp");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: use.$color-gray;
+      z-index: 1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/web-desk-main-cat@2x.webp");
+      }
+    }
+  }
+
+  &--catalog {
+    margin: 0;
+
+    @include use.media-mobile-only {
+      border-bottom: 1px solid use.$color-program-border;
+    }
+
+    @include use.media-desktop {
+      min-height: auto;
+      margin-top: 1px;
+    }
+  }
+}

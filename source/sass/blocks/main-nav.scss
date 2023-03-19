@@ -1,0 +1,391 @@
+@use "../global/use.scss";
+
+.main-nav {
+  position: relative;
+  padding: 11px 20px;
+  z-index: 5;
+
+  @include use.media-mobile-only {
+    padding: 11px 0;
+
+    &--opened .main-nav__toggle {
+      background-image: url("../img/svg/mob-menu-close.svg");
+      margin: 21px 23px;
+      width: 19px;
+      height: 20px;
+      top: 0;
+      right: 0;
+    }
+
+    &--closed .main-nav__toggle {
+      background-image: url("../img/svg/mob-menu-open.svg");
+      width: 24px;
+      height: 18px;
+      top: -2px;
+      right: 0;
+    }
+
+    &--closed .main-nav__wrapper {
+      display: none;
+    }
+
+    &--opened .main-nav__wrapper {
+      display: block;
+    }
+
+    &--nojs .main-nav__toggle {
+      display: none;
+    }
+
+    &--nojs .main-nav__wrapper {
+      display: block;
+      position: relative;
+      top: 11px;
+      margin: 0;
+    }
+  }
+
+  @include use.media-tablet {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-bottom: 63px;
+  }
+
+  @include use.media-desktop {
+    padding: 53px 111px 0 110px;
+    margin: 0 auto;
+    margin-bottom: 112px;
+    max-width: 1220px;
+  }
+
+  &--catalog {
+    @include use.media-tablet {
+      margin-bottom: 64px;
+    }
+
+    @include use.media-desktop {
+      margin-bottom: 75px;
+    }
+  }
+
+  &--form {
+    @include use.media-tablet {
+      margin-bottom: 64px;
+    }
+
+    @include use.media-desktop {
+      margin-bottom: 73px;
+    }
+  }
+}
+
+.main-nav__logo {
+  display: inline-block;
+  height: 38px;
+  width: calc(100% - 85px);
+
+  @include use.media-tablet {
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 1px;
+  }
+
+  @include use.media-desktop {
+    left: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 1px solid use.$color-black;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__picture {
+  display: block;
+}
+
+.main-nav__img {
+  display: block;
+  position: absolute;
+
+  @include use.media-mobile-only {
+    top: 12px;
+    left: 21px;
+  }
+
+  @include use.media-tablet {
+    top: 10px;
+    width: 174px;
+    height: 52px;
+    position: static;
+  }
+
+  @include use.media-desktop {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.main-nav__text {
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include use.media-tablet {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 24px 20px;
+  z-index: 3;
+  right: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    left: -15px;
+    right: -15px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 1px solid use.$color-black;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include use.media-tablet {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 65px;
+  margin: 0;
+
+  @include use.media-tablet {
+    display: inline-flex;
+    position: relative;
+    width: auto;
+    top: 4px;
+  }
+
+  @include use.media-desktop {
+    top: 1px;
+  }
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include use.media-tablet {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    column-gap: 37px;
+    max-width: 450px;
+    row-gap: 10px;
+  }
+
+  @include use.media-desktop {
+    column-gap: 34px;
+    max-width: 480px;
+  }
+
+  &--catalog {
+    @include use.media-tablet {
+      column-gap: 36px;
+    }
+
+    @include use.media-desktop {
+      column-gap: 35px;
+    }
+  }
+
+  &--form {
+    @include use.media-tablet {
+      column-gap: 34px;
+    }
+  }
+}
+
+.main-nav__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @include use.media-mobile-only {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid use.$color-line;
+    background-color: use.$color-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+    &:first-child {
+      border-top: 1px solid use.$color-line;
+    }
+  }
+
+  @include use.media-tablet {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: none;
+  }
+}
+
+.main-nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 1px solid use.$color-black;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+
+  &--current {
+    @include use.media-tablet {
+      color: use.$color-black;
+      left: 2px;
+    }
+
+    @include use.media-desktop {
+      color: use.$color-white;
+      left: -1px;
+    }
+  }
+
+  &--current--catalog {
+    @include use.media-tablet {
+      left: -3px;
+    }
+
+    @include use.media-desktop {
+      left: 1px;
+    }
+  }
+
+  &--current::before,
+  &--current--catalog::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+    height: 2px;
+    background-color: use.$color-green;
+    transition: width 0.35s;
+
+    @include use.media-tablet {
+      bottom: -5px;
+    }
+
+    @include use.media-desktop {
+      background-color: use.$color-white;
+    }
+  }
+
+  &--catalog::before {
+    @include use.media-tablet {
+      bottom: -2px;
+    }
+
+    @include use.media-desktop {
+      background-color: use.$color-green;
+      bottom: -5px;
+    }
+  }
+
+  &--form::before {
+    @include use.media-tablet {
+      bottom: -2px;
+    }
+
+    @include use.media-desktop {
+      background-color: use.$color-green;
+      bottom: -4px;
+    }
+  }
+
+  @include use.media-mobile-only {
+    @include use.font-oswald-big;
+    font-weight: 500;
+    color: use.$color-black;
+    left: -1px;
+    margin: 12px 41px;
+  }
+
+  @include use.media-tablet {
+    @include use.font-oswald-18;
+    color: use.$color-black;
+    line-height: 33px;
+  }
+
+  @include use.media-desktop {
+    @include use.font-oswald-big;
+    line-height: 36px;
+    color: use.$color-white;
+  }
+
+  &--catalog {
+    @include use.media-desktop {
+      color: use.$color-black;
+    }
+  }
+
+  &--form {
+    @include use.media-tablet {
+      left: -1px;
+      color: use.$color-black;
+    }
+
+    @include use.media-desktop {
+      left: 0;
+    }
+  }
+}
