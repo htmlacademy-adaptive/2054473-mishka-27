@@ -1,1 +1,5 @@
-// Начните писать стили здесь
+@use "./global/use.scss";
+@use "./global/base.scss";
+@use "./global/mixins.scss";
+@use "./blocks/main-header.scss";
+@use "./blocks/main-nav.scss";

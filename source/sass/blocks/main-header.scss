@@ -1,7 +1,8 @@
 @use "../global/use.scss";
 
-.main-header {
+.header {
   @include use.media-mobile-only {
+    height: 79px;
     margin-bottom: 20px;
   }
 
@@ -45,7 +46,7 @@
     margin: 0;
 
     @include use.media-mobile-only {
-      border-bottom: 1px solid use.$color-program-border;
+      border-bottom: 1px solid use.$color-gray;
     }
 
     @include use.media-desktop {

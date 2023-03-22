@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @include mixins.font-lato-normal;
+  @include mixins.font-lite-15;
   background-color: variables.$color-white;
   margin: 0 auto;
   color: variables.$color-black;
