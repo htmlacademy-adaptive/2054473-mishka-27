@@ -2,8 +2,8 @@
 
 .header {
   @include use.media-mobile-only {
-    height: 79px;
-    margin-bottom: 20px;
+    min-height: 79px;
+    // margin-bottom: 20px;
   }
 
   @include use.media-desktop {
