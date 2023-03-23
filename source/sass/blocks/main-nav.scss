@@ -3,11 +3,9 @@
 .main-nav {
   position: relative;
   z-index: 5;
-  border-bottom: 1px solid use.$color-lite-gray;
 
   @include use.media-mobile-only {
     padding-top: 22px;
-
 
     &--opened .main-nav__toggle {
       background-image: url("../img/svg/mob-menu-close.svg");
@@ -57,15 +55,14 @@
   @include use.media-tablet {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
     padding: 0 50px 0 48px;
-    height: 88px;
+    min-height: 88px;
   }
 
   @include use.media-desktop {
-    padding: 53px 111px 0 110px;
-    margin: 0 auto;
-    margin-bottom: 112px;
-    max-width: 1220px;
+    padding: 0 53px 0 48px;
   }
 }
 
@@ -90,15 +87,17 @@
   }
 
   @include use.media-tablet {
-    min-width: 322px;
+    width: calc(100% - 349px);
     height: auto;
     display: flex;
     align-items: center;
   }
 
-  // @include use.media-desktop {
-  //   left: 0;
-  // }
+  @include use.media-desktop {
+    width: 172px;
+    order: 1;
+    top: 8px;
+  }
 }
 
 .main-nav__picture {
@@ -121,8 +120,8 @@
   }
 
   @include use.media-desktop {
-    width: 202px;
-    height: 59px;
+    width: 149px;
+    height: 72px;
   }
 }
 
@@ -163,19 +162,17 @@
 }
 
 .main-nav__list {
+  @include use.font-bold-17;
   list-style: none;
   margin: 0;
   padding: 0;
+  line-height: 24px;
+  position: relative;
 
   @include use.media-tablet {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-  }
-
-  @include use.media-desktop {
-    column-gap: 34px;
-    max-width: 480px;
   }
 
   &--site {
@@ -184,7 +181,32 @@
     }
 
     @include use.media-tablet {
+      @include use.font-bold-15;
+      padding: 22px 0;
+      left: 2px;
+      column-gap: 37px;
       order: 2;
+    }
+
+    @include use.media-desktop {
+      @include use.font-bold-17;
+      padding: 0;
+      order: 0;
+      column-gap: 0;
+      width: 375px;
+    }
+  }
+
+  &--site .main-nav__item:nth-child(2n+1) {
+    @include use.media-desktop {
+      padding-right: 35px;
+    }
+  }
+
+  &--site .main-nav__item:nth-child(2n) {
+    @include use.media-desktop {
+      padding-left: 35px;
+      border-left: 1px solid use.$color-lite-gray;
     }
   }
 
@@ -197,6 +219,12 @@
   &--user {
     @include use.media-tablet {
       order: 1;
+    }
+
+    @include use.media-desktop {
+      order: 2;
+      column-gap: 0;
+      max-width: 431px;
     }
   }
 
@@ -214,7 +242,16 @@
     display: none;
 
     @include use.media-desktop {
-      display: block;
+      @include use.font-bold-15;
+      position: relative;
+      display: flex;
+      padding: 20.5px 0;
+      left: 3px;
+      order: 3;
+      column-gap: 61.5px;
+      align-self: center;
+      width: 700px;
+      row-gap: 20px;
     }
   }
 }
@@ -222,9 +259,6 @@
 .main-nav__item {
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   position: relative;
 
   @include use.media-mobile-only {
@@ -238,11 +272,19 @@
     box-shadow: none;
     border-bottom: none;
   }
+
+  @include use.media-desktop {
+    align-items: center;
+  }
+
+  &--site {
+    @include use.media-desktop {
+      min-height: 88px;
+    }
+  }
 }
 
 .main-nav__link {
-  @include use.font-bold-17;
-  line-height: 24px;
   color: use.$color-black;
   text-decoration: none;
   text-align: center;
@@ -264,30 +306,31 @@
     opacity: 0.6;
   }
 
-  @include use.media-desktop {
-    @include use.font-bold-17;
-    line-height: 36px;
-    color: use.$color-white;
-  }
+  // @include use.media-desktop {
+  // }
 
   &--current {
     color: use.$color-active-mint;
   }
 
   &--search {
-    // padding: 31px 30px 24px 34px;
-
     @include use.media-tablet {
-      padding: 31px 31px 24px 33px;
+      padding: 35px 31px 29px 33px;
     }
   }
 
   &--cart {
     @include use.media-tablet {
       position: relative;
-      padding: 28px 0 26px 31px;
+      padding: 32px 0 31.5px 31.5px;
     }
   }
+
+  // &--site {
+  //   @include use.media-desktop {
+  //     // padding: 33px 0 31px;
+  //   }
+  // }
 }
 
 .main-nav__ico-search,
@@ -323,5 +366,27 @@
 
   @include use.media-mobile-only {
     display: inline-block;
+  }
+}
+
+.main-nav__text-delivery {
+  display: none;
+
+  @include use.media-tablet {
+    display: block;
+    position: relative;
+    margin: 0;
+    order: 2;
+    top: -1px;
+    line-height: 24px;
+  }
+
+  @include use.media-desktop {
+    order: 4;
+    top: auto;
+    left: 1px;
+    padding: 21px 0;
+    max-width: 262px;
+    align-self: center;
   }
 }
