@@ -3,26 +3,28 @@
 .header {
   @include use.media-mobile-only {
     min-height: 79px;
+    border-bottom: 1px solid use.$color-lite-gray;
     // margin-bottom: 20px;
   }
 
   @include use.media-tablet {
-    background-image: linear-gradient(#ffffff 88px, #fafafa 50px);
+    // background-image: linear-gradient(#ffffff 88px, #fafafa 50px);
+    background-color: use.$color-white;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    background-color: use.$color-lite-gray;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   height: 1px;
+  //   width: 100%;
+  //   background-color: use.$color-lite-gray;
 
-    @include use.media-mobile-only {
-      top: 78px;
-    }
+  //   @include use.media-mobile-only {
+  //     top: 78px;
+  //   }
 
-    @include use.media-tablet {
-      top: 88px;
-    }
-  }
+  //   @include use.media-tablet {
+  //     top: 88px;
+  //   }
+  // }
 }
