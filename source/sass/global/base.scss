@@ -29,8 +29,9 @@ body {
   clip-path: inset(100%);
 }
 
-.main-block {
+.main {
   flex-grow: 1;
+  display: contents; // посмотреть ка кведет себя
 }
 
 img {

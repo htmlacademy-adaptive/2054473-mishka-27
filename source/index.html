@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="/img/svg/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/img/favicon/favicon-180.png">
+    <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/favicon-180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="/fonts/opensans.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
-    <link rel="preload" href="/fonts/opensansbold.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
-    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
 <header class="header">
     <h1 class="visually-hidden">Магазин игрушек ручной работы Мишка.</h1>
-
+<div class="main-nav__wrapper">
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <a class="main-nav__logo" href="#">
         <picture class="main-nav__picture">
@@ -64,12 +64,25 @@
         </ul>
 
         <p class="main-nav__text-delivery">Бесплатная доставка по России</p>
+        </div>
     </nav>
 </header>
 
 
-    <main class="main-block">
-      <!-- <p style="width: 100%; height: 500px; background:purple;">666</p> -->
+    <main class="main">
+      <section class="things">
+       <div class="things__wrapper">
+        <h2 class="things__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h2>
+        <ul class="things__list">
+          <li class="things__item things__item--interior">
+            <a class="things__link things__link--interior" href="#">Предметы<br> интерьера</a>
+          </li>
+          <li class="things__item things__item--toys">
+            <a class="things__link things__link--toys" href="#">Детские<br> игрушки</a>
+          </li>
+        </ul>
+       </div>
+      </section>
     </main>
 
     <script src="js/script.js"></script>

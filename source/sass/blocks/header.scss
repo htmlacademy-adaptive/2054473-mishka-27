@@ -1,0 +1,15 @@
+@use "../global/use.scss";
+
+.header {
+  width: 100%;
+  position: relative;
+
+  @include use.media-mobile-only {
+    min-height: 79px;
+    border-bottom: 1px solid use.$color-lite-gray;
+  }
+
+  @include use.media-tablet {
+    background-color: use.$color-white;
+  }
+}

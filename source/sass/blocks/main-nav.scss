@@ -1,5 +1,12 @@
 @use "../global/use.scss";
 
+.main-nav__wrapper {
+  display: block;
+  max-width: 1150px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .main-nav {
   position: relative;
   z-index: 5;
@@ -208,7 +215,7 @@
       position: absolute;
       width: 100vw;
       height: 100%;
-      background-color: use.$color-lmore-gray;
+      background-color: use.$color-more-gray;
       top: 0;
       left: -51px;
     }
@@ -258,7 +265,8 @@
   &--user {
     @include use.media-tablet {
       order: 1;
-      max-width: 431px;
+      // max-width: 431px;
+      max-width: 348px;
     }
 
     @include use.media-desktop {
@@ -275,6 +283,7 @@
 
     @include use.media-tablet {
       border-left: 1px solid use.$color-lite-gray;
+      align-self: normal;
     }
   }
 
@@ -292,7 +301,7 @@
       align-self: center;
       min-height: 25px;
       min-width: 400px;
-      max-width: 700px;
+      max-width: 615px;
       row-gap: 20px;
     }
   }
@@ -303,9 +312,9 @@
       position: absolute;
       width: 100vw;
       height: 100%;
-      background-color: use.$color-lmore-gray;
+      left: calc((100vw + -1048px) / 2 * -1);
+      background-color: use.$color-more-gray;
       top: 0;
-      left: -51px;
     }
   }
 
@@ -315,7 +324,7 @@
       position: absolute;
       height: 1px;
       width: 100vw;
-      left: -51px;
+      left: calc((100vw + -1048px) / 2 * -1);
       top: 0;
       background-color: use.$color-lite-gray;
     }
