@@ -125,9 +125,9 @@
 }
 
 .things__link {
+  display: block;
   text-decoration: none;
   color: use.$color-white;
-  display: block;
 
   @include use.media-mobile-only {
     @include use.font-bold-19;
@@ -137,6 +137,7 @@
   @include use.media-tablet {
     @include use.font-bold-20;
     line-height: 30px;
+    transition: all 0.25s ease-in-out;
   }
 }
 
@@ -149,14 +150,23 @@
 
   @include use.media-tablet {
     padding: 26px 36px 31px;
+    box-shadow: 0 10px use.$color-light-mint;
   }
 
   &:hover,
   &:focus {
     background: use.$color-thing-first;
-    box-shadow: 0 10px use.$color-light-mint;
+    box-shadow: 0 5px use.$color-thing-first;
     transform: translateY(-5px);
     outline: none;
+  }
+
+  &:active {
+    background-color: use.$color-light-mint;
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -169,14 +179,24 @@
 
   @include use.media-tablet {
     padding: 26px 36px 31px;
+    box-shadow: 0 10px use.$color-dark-mint;
   }
+
 
   &:hover,
   &:focus {
     background: use.$color-thing-second;
-    box-shadow: 0 10px use.$color-light-mint;
     transform: translateY(-5px);
     outline: none;
+    box-shadow: 0 5px use.$color-thing-second;
+  }
+
+  &:active {
+    background-color: use.$color-dark-mint;
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 
