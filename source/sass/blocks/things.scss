@@ -5,6 +5,7 @@
   width: 100%;
   background-color: use.$color-more-gray;
   background-repeat: no-repeat;
+  position: relative;
 
   @include use.media-mobile-only {
     background-image: url("../img/web-mob-slider.webp");
@@ -24,6 +25,43 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/web-tab-slider@2x.webp");
     }
+  }
+
+  @include use.media-desktop {
+    background-image: url("../img/web-desk-slider.webp");
+    background-size: 1150px 746px;
+    background-position: 50% 97%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/web-desk-slider@2x.webp");
+    }
+  }
+}
+
+.things::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+
+  @include use.media-tablet {
+    background-image: url("../img/svg/tab-fat-wave.svg");
+    background-repeat: repeat-x;
+    background-size: 38.5px;
+    left: -1px;
+    right: 0;
+    bottom: -14px;
+    height: 24px;
+  }
+
+  @include use.media-desktop {
+    background-image: url("../img/svg/desk-fat-wave.svg");
+    background-repeat: repeat-x;
+    background-size: 62.5px;
+    left: 13px;
+    right: 0;
+    bottom: -19px;
+    height: 34px;
   }
 }
 
@@ -55,6 +93,12 @@
     line-height: 50px;
     padding: 88px 50px 371px;
   }
+
+  @include use.media-desktop {
+    @include use.font-bold-53;
+    line-height: 57px;
+    padding: 92px 143px 355px;
+  }
 }
 
 .things__list {
@@ -75,27 +119,15 @@
 .things__item {
   position: relative;
 
-  @include use.media-mobile-only {
-    padding: 23px 27px 32px 30px;
-  }
-
   @include use.media-tablet {
-    padding: 26px 36px 31px;
     width: 50%;
   }
-}
-
-.things__item--interior {
-  background-color: use.$color-light-mint;
-}
-
-.things__item--toys {
-  background-color: use.$color-dark-mint;
 }
 
 .things__link {
   text-decoration: none;
   color: use.$color-white;
+  display: block;
 
   @include use.media-mobile-only {
     @include use.font-bold-19;
@@ -105,6 +137,46 @@
   @include use.media-tablet {
     @include use.font-bold-20;
     line-height: 30px;
+  }
+}
+
+.things__link--interior {
+  background-color: use.$color-light-mint;
+
+  @include use.media-mobile-only {
+    padding: 23px 27px 32px 30px;
+  }
+
+  @include use.media-tablet {
+    padding: 26px 36px 31px;
+  }
+
+  &:hover,
+  &:focus {
+    background: use.$color-thing-first;
+    box-shadow: 0 10px use.$color-light-mint;
+    transform: translateY(-5px);
+    outline: none;
+  }
+}
+
+.things__link--toys {
+  background-color: use.$color-dark-mint;
+
+  @include use.media-mobile-only {
+    padding: 23px 27px 32px 30px;
+  }
+
+  @include use.media-tablet {
+    padding: 26px 36px 31px;
+  }
+
+  &:hover,
+  &:focus {
+    background: use.$color-thing-second;
+    box-shadow: 0 10px use.$color-light-mint;
+    transform: translateY(-5px);
+    outline: none;
   }
 }
 
@@ -135,5 +207,9 @@
   @include use.media-tablet {
     right: 33px;
     top: 31px;
+  }
+
+  @include use.media-desktop {
+    right: 35px;
   }
 }
