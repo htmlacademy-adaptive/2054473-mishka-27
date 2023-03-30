@@ -8,9 +8,10 @@ html {
 
 body {
   @include mixins.font-lite-15;
+  line-height: 24px;
   background-color: variables.$color-white;
   margin: 0 auto;
-  color: variables.$color-black;
+  color: variables.$color-gray;
   display: flex;
   flex-direction: column;
   min-height: 100%;

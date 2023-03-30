@@ -11,6 +11,7 @@
     background-image: url("../img/web-mob-slider.webp");
     background-size: 320px 373px;
     background-position: 50% -16%;
+    margin-bottom: 31px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/web-mob-slider@2x.webp");
@@ -21,6 +22,7 @@
     background-image: url("../img/web-tab-slider.webp");
     background-size: 768px 746px;
     background-position: 50% 98%;
+    margin-bottom: 54px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/web-tab-slider@2x.webp");
@@ -31,6 +33,7 @@
     background-image: url("../img/web-desk-slider.webp");
     background-size: 1150px 746px;
     background-position: 50% 97%;
+    margin-bottom: 133px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/web-desk-slider@2x.webp");
@@ -39,12 +42,11 @@
 }
 
 .things::after {
-  content: "";
-  position: absolute;
-  display: block;
-  box-sizing: border-box;
-
   @include use.media-tablet {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
     background-image: url("../img/svg/tab-fat-wave.svg");
     background-repeat: repeat-x;
     background-size: 38.5px;
@@ -80,6 +82,7 @@
 .things__title {
   margin: 0;
   text-align: center;
+  color: use.$color-black;
 
   @include use.media-mobile-only {
     @include use.font-bold-27;
@@ -92,12 +95,13 @@
     @include use.font-bold-43;
     line-height: 50px;
     padding: 88px 50px 371px;
+    max-width: 700px;
   }
 
   @include use.media-desktop {
     @include use.font-bold-53;
     line-height: 57px;
-    padding: 92px 143px 355px;
+    padding: 92px 175px 355px;
   }
 }
 

@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@mixin font-lite-17 {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  font-style: normal;
+}
+
 @mixin font-bold-15 {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 700;

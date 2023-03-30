@@ -76,12 +76,10 @@
 .main-nav__logo {
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
-  }
-
-  &:focus-visible {
-    outline: 2px solid use.$color-black;
+    outline: none;
   }
 
   &:active {
@@ -153,16 +151,14 @@
     right: -15px;
   }
 
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus-visible {
-    outline: 1px solid use.$color-black;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   &:active {
-    opacity: 0.6;
+    opacity: 0.3;
   }
 
   @include use.media-tablet {
@@ -381,24 +377,19 @@
   text-align: center;
   position: relative;
 
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus-visible {
-    outline: 1px solid use.$color-black;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
   }
 
   &:active {
-    opacity: 0.6;
+    opacity: 0.3;
   }
 
   &:disabled {
     opacity: 0.6;
   }
-
-  // @include use.media-desktop {
-  // }
 
   &--current {
     color: use.$color-active-mint;
