@@ -5,10 +5,21 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
+
+  @include use.media-mobile-only {
+    margin-bottom: 38px;
+  }
+
+  @include use.media-tablet {
+    margin-bottom: 73px;
+  }
+
+  @include use.media-desktop {
+    margin-bottom: 91px;
+  }
 }
 
 .special::after {
-
   @include use.media-mobile-only {
     content: "";
     position: absolute;
@@ -37,10 +48,8 @@
 
   @include use.media-desktop {
     background-image: url("../img/svg/desk-wave.svg");
-    background-repeat: repeat-x;
     background-size: 52.5px;
     left: -2px;
-    right: 0;
     bottom: -23px;
     height: 23px;
   }
@@ -83,7 +92,6 @@
   }
 
   @include use.media-desktop {
-
     margin-left: 19px;
   }
 }

@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTML Academy: Мишка</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/favicon/favicon-180.png">
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-<header class="header">
-    <h1 class="visually-hidden">Магазин игрушек ручной работы Мишка.</h1>
-<div class="main-nav__wrapper">
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <a class="main-nav__logo" href="#">
-        <picture class="main-nav__picture">
-          <source media="(min-width: 1150px)" srcset="img/svg/desk-logo.svg">
-          <source media="(min-width: 768px)" srcset="img/svg/tab-logo.svg">
-          <img class="main-nav__img" src="img/svg/mob-logo.svg" width="86" height="35" alt="Мишка.">
-        </picture>
-      </a>
 
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
-      </button>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Мишка</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/favicon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Магазин игрушек ручной работы Мишка.</h1>
+    <div class="main-nav__wrapper">
+       <nav class="main-nav main-nav--closed main-nav--nojs">
+        <a class="main-nav__logo" href="#">
+          <picture class="main-nav__picture">
+            <source media="(min-width: 1150px)" srcset="img/svg/desk-logo.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/tab-logo.svg">
+            <img class="main-nav__img" src="img/svg/mob-logo.svg" width="86" height="35" alt="Мишка.">
+          </picture>
+        </a>
+
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
 
         <ul class="main-nav__list main-nav__list--site">
           <li class="main-nav__item main-nav__item--site">
-            <a class="main-nav__link main-nav__link--site main-nav__link--current" href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__link main-nav__link--site main-nav__link--current" href="catalog.html">Каталог
+              товаров</a>
           </li>
           <li class="main-nav__item main-nav__item--site">
             <a class="main-nav__link main-nav__link--site" href="#">Вязание на заказ</a>
@@ -47,11 +50,11 @@
               <span class="main-nav__search-text">Поиск по сайту</span></a>
           </li>
           <li class="main-nav__item main-nav__item--user">
-            <a class="main-nav__link main-nav__link--cart" href="#"><svg class="main-nav__ico-cart" width="21" height="18" role="img">
-              <use href="img/svg/sprite.svg#icon-cart"></use>
-            </svg><span class="govno">Корзина: пока пуста</span></a>
+            <a class="main-nav__link main-nav__link--cart" href="#"><svg class="main-nav__ico-cart" width="21"
+                height="18" role="img">
+                <use href="img/svg/sprite.svg#icon-cart"></use>
+              </svg><span class="govno">Корзина: пока пуста</span></a>
           </li>
-
         </ul>
 
         <ul class="main-nav__list main-nav__list--additional">
@@ -62,82 +65,87 @@
             <a class="main-nav__link" href="#">Распродажа</a>
           </li>
         </ul>
-
         <p class="main-nav__text-delivery">Бесплатная доставка по России</p>
-        </div>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
 
-    <main class="main">
-      <section class="things">
-       <div class="things__wrapper">
+  <main class="main">
+    <section class="things">
+      <div class="things__wrapper">
         <h2 class="things__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h2>
         <ul class="things__list">
           <li class="things__item things__item--interior">
-            <a class="things__link things__link--interior" href="#">Предметы<br> интерьера
-
-            </a>
+            <a class="things__link things__link--interior" href="#">Предметы<br> интерьера</a>
           </li>
           <li class="things__item things__item--toys">
             <a class="things__link things__link--toys" href="#">Детские<br> игрушки</a>
           </li>
         </ul>
-       </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="special">
-<div class="special__wrapper">
-<div class="special__box-title">
-  <h2 class="special__title">Вязаные корзинки</h2>
-  <span class="special__label">Товар недели</span>
-</div>
+    <section class="special">
+      <div class="special__wrapper">
+        <div class="special__box-title">
+          <h2 class="special__title">Вязаные корзинки</h2>
+          <span class="special__label">Товар недели</span>
+        </div>
 
+        <div class="special__card-box">
+          <p class="special__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
+            размерах.</p>
+          <table class="special__table">
+            <tr class="special__table-row">
+              <td class="special__table-cell special__table-cell--position">Цвет:</td>
+              <td class="special__table-cell special__table-cell--position">тиффани/серый</td>
+            </tr>
+            <tr class="special__table-row">
+              <td class="special__table-cell">Диаметр:</td>
+              <td class="special__table-cell">25 см</td>
+            </tr>
+            <tr class="special__table-row">
+              <td class="special__table-cell">Высота:</td>
+              <td class="special__table-cell">15 см</td>
+            </tr>
+          </table>
+        </div>
+        <picture class="special__box-img">
+          <source media="(min-width: 1150px)" srcset="img/web-desk-baskets.webp, img/web-desk-baskets@2x.webp 2x"
+            type="image/webp">
+          <source media="(min-width: 1150px)" srcset="img/web-desk-baskets.jpg, img/web-desk-baskets@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/web-tab-baskets.webp, img/web-tab-baskets@2x.webp 2x"
+            type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/web-tab-baskets.jpg, img/web-tab-baskets@2x.jpg 2x">
+          <source srcset="img/web-mob-baskets.webp, img/web-mob-baskets@2x.webp 2x" type="image/webp">
+          <img class="special__img" src="img/web-mob-baskets.jpg" srcset="img/web-mob-baskets@2x.jpg 2x" width="260"
+            height="315" alt="Экологочиески чистые вязанные корзинки.">
+        </picture>
 
-<div class="special__card-box">
-  <p class="special__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-  <table class="special__table">
-    <tr class="special__table-row">
-      <td class="special__table-cell special__table-cell--position">Цвет:</td>
-      <td class="special__table-cell special__table-cell--position">тиффани/серый</td>
-    </tr>
-    <tr class="special__table-row">
-      <td class="special__table-cell">Диаметр:</td>
-      <td class="special__table-cell">25 см</td>
-    </tr>
-    <tr class="special__table-row">
-      <td class="special__table-cell">Высота:</td>
-      <td class="special__table-cell">15 см</td>
-    </tr>
-  </table>
-</div>
-<picture class="special__box-img">
-  <source media="(min-width: 1150px)"
-    srcset="img/web-desk-baskets.webp, img/web-desk-baskets@2x.webp 2x"
-    type="image/webp">
-  <source media="(min-width: 1150px)"
-    srcset="img/web-desk-baskets.jpg, img/web-desk-baskets@2x.jpg 2x">
-  <source media="(min-width: 768px)"
-    srcset="img/web-tab-baskets.webp, img/web-tab-baskets@2x.webp 2x"
-    type="image/webp">
-  <source media="(min-width: 768px)"
-    srcset="img/web-tab-baskets.jpg, img/web-tab-baskets@2x.jpg 2x">
-  <source srcset="img/web-mob-baskets.webp, img/web-mob-baskets@2x.webp 2x"
-    type="image/webp">
-  <img class="special__img" src="img/web-mob-baskets.jpg"
-    srcset="img/web-mob-baskets@2x.jpg 2x" width="260" height="315"
-    alt="Экологочиески чистые вязанные корзинки.">
-</picture>
+        <div class="special__box-buy">
+          <span class="special__price">Цена: 990 руб.</span>
+          <button class="special__btn btn" type="button">Заказать</button>
+        </div>
+      </div>
+    </section>
 
-<div class="special__box-buy">
-  <span class="special__price">Цена: 990 руб.</span>
-  <button class="special__btn btn" type="button">Заказать</button>
-</div>
-</div>
+    <section class="about">
+      <div class="about__wrapper">
+        <h2 class="about__title">Коротко о нас:</h2>
+        <ul class="about__list">
+          <li class="about__item about__item--ecology">Экологически чистые&nbsp;материалы</li>
+          <li class="about__item about__item--style">Скандинавский стиль по&nbsp;российской цене</li>
+          <li class="about__item about__item--likes">Увеличивает лайки на&nbsp;фотографиях</li>
+          <li class="about__item about__item--handmade">Связано вручную <br>с любовью и умилением</li>
+          <li class="about__item about__item--support">Поддержка&nbsp;отечественного производителя</li>
+          <li class="about__item about__item--gift">Поставляется <br>в подарочной упаковке</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-      </section>
-    </main>
+  <script src="js/script.js"></script>
+</body>
 
-    <script src="js/script.js"></script>
-  </body>
 </html>
