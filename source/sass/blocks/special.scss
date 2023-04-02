@@ -47,11 +47,7 @@
   }
 
   @include use.media-desktop {
-    background-image: url("../img/svg/desk-wave.svg");
-    background-size: 52.5px;
-    left: -2px;
-    bottom: -23px;
-    height: 23px;
+    display: none;
   }
 }
 
@@ -67,11 +63,29 @@
 
   @include use.media-tablet {
     padding: 0 50px;
+    padding-bottom: 52px;
   }
 
   @include use.media-desktop {
-    max-width: 1150px;
+    max-width: 1050px;
     margin: 0 auto;
+    padding-bottom: 73px;
+    position: relative;
+  }
+}
+
+.special__wrapper::after {
+  @include use.media-desktop {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../img/svg/desk-wave.svg");
+    background-repeat: repeat-x;
+    background-size: 52.5px;
+    left: 4.3%;
+    bottom: -23px;
+    height: 23px;
+    width: 91.3%;
   }
 }
 
@@ -288,12 +302,10 @@
 
   @include use.media-tablet {
     max-width: 292px;
-    margin-bottom: 52px;
   }
 
   @include use.media-desktop {
     padding-left: 174px;
-    margin-bottom: 73px;
   }
 }
 
