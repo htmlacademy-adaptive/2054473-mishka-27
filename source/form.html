@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Мишка</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/favicon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Магазин игрушек ручной работы Мишка.</h1>
+    <div class="main-nav__wrapper">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <a class="main-nav__logo" href="#">
+          <picture class="main-nav__picture">
+            <source media="(min-width: 1150px)" srcset="img/svg/desk-logo.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/tab-logo.svg">
+            <img class="main-nav__img" src="img/svg/mob-logo.svg" width="86" height="35" alt="Мишка.">
+          </picture>
+        </a>
+
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+
+        <ul class="main-nav__list main-nav__list--site">
+          <li class="main-nav__item main-nav__item--site">
+            <a class="main-nav__link main-nav__link--site main-nav__link--current" href="catalog.html">Каталог
+              товаров</a>
+          </li>
+          <li class="main-nav__item main-nav__item--site">
+            <a class="main-nav__link main-nav__link--site" href="#">Вязание на заказ</a>
+          </li>
+        </ul>
+
+        <ul class="main-nav__list main-nav__list--user">
+          <li class="main-nav__item main-nav__item--user">
+            <a class="main-nav__link main-nav__link--search" href="#">
+              <svg class="main-nav__ico-search" width="18" height="18" role="img">
+                <use href="img/svg/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="main-nav__search-text">Поиск по сайту</span></a>
+          </li>
+          <li class="main-nav__item main-nav__item--user">
+            <a class="main-nav__link main-nav__link--cart" href="#"><svg class="main-nav__ico-cart" width="21"
+                height="18" role="img">
+                <use href="img/svg/sprite.svg#icon-cart"></use>
+              </svg><span class="govno">Корзина: пока пуста</span></a>
+          </li>
+        </ul>
+
+        <ul class="main-nav__list main-nav__list--additional">
+          <li class="main-nav__item main-nav__item--additional">
+            <a class="main-nav__link" href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item main-nav__item--additional">
+            <a class="main-nav__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__text-delivery">Бесплатная доставка по России</p>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="main">
+    <section class="things">
+      <div class="things__wrapper">
+        <h2 class="things__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h2>
+        <ul class="things__list">
+          <li class="things__item things__item--interior">
+            <a class="things__link things__link--interior" href="#">Предметы<br> интерьера</a>
+          </li>
+          <li class="things__item things__item--toys">
+            <a class="things__link things__link--toys" href="#">Детские<br> игрушки</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <h2 class="visually-hidden">Мы в соцсетях.</h2>
+      <a href="#" class="footer__logo-link-box">
+          <svg class="footer__logo" width="102" height="34" role="img" aria-label="Мишка.">
+            <use href="img/svg/sprite.svg#icon-logo-footer"></use>
+          </svg>
+      </a>
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank"
+            aria-label="Группа HTML Academy в ВКонтакте.">
+            <svg class="footer__social-ico" width="29" height="22" role="img">
+              <use href="img/svg/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
+            aria-label="Канал HTML Academy на YouTube.">
+            <svg class="footer__social-ico" width="29" height="22" role="img">
+              <use href="img/svg/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://t.me/htmlacademy" target="_blank"
+            aria-label="Канал HTML Academy в Telegram.">
+            <svg class="footer__social-ico" width="29" height="22" role="img">
+              <use href="img/svg/sprite.svg#icon-telegram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer__created">
+        <a class="footer__created-link-box" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+          aria-label="Сайт HTML Academy.">
+          <span class="footer__created-text">Разработано</span>
+          <svg class="footer__created-ico" width="27" height="35" role="img">
+            <use href="img/svg/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
