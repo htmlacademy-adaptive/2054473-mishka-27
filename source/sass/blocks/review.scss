@@ -23,6 +23,7 @@
 
   @include use.media-desktop {
     background-position: top 0 left 6.2%;
+    margin-bottom: 93px;
   }
 }
 
@@ -184,6 +185,16 @@
   line-height: 30px;
   text-decoration: none;
   color: use.$color-gray;
+
+  &:hover,
+  &:focus {
+    color: use.$color-thing-second;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .review__navigation-box {

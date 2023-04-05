@@ -176,7 +176,7 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Контакты</h2>
-        <dl class="contacts__list slide">
+        <dl class="contacts__list">
           <dt class="contacts__termin">e-mail:</dt>
           <dd class="contacts__description">
             <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
@@ -192,6 +192,55 @@
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <h2 class="visually-hidden">Мы в соцсетях.</h2>
+      <a href="#" class="footer__logo-link-box">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/svg/tab-desk-footer-logo.svg">
+          <img class="footer__logo" src="img/svg/mob-footer-logo.svg" width="128" height="24" alt="Мишка.">
+        </picture>
+      </a>
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://vk.com/htmlacademy" target="_blank"
+            aria-label="Группа HTML Academy в ВКонтакте.">
+            <svg class="footer__social-ico" width="29" height="22" role="img">
+              <use href="img/svg/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
+            aria-label="Канал HTML Academy на YouTube.">
+            <svg class="footer__social-ico" width="29" height="22" role="img">
+              <use href="img/svg/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://t.me/htmlacademy" target="_blank"
+            aria-label="Канал HTML Academy в Telegram.">
+            <svg class="footer__social-ico" width="29" height="22" role="img">
+              <use href="img/svg/sprite.svg#icon-telegram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer__created">
+        <a class="footer__created-link-box" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+          aria-label="Сайт HTML Academy.">
+          <span class="footer__created-text">HTML Academy</span>
+          <svg class="footer__created-ico" width="27" height="35" role="img">
+            <use href="img/svg/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>

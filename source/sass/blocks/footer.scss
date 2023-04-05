@@ -1,0 +1,24 @@
+@use "../global/use.scss";
+
+.footer {
+  display: block;
+  max-width: 1150px;
+  margin: 0 auto;
+  background-color: use.$color-footer-gray;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+
+  @include use.media-mobile-only {
+    padding: 0 30px 39px 29px;
+  }
+
+  @include use.media-tablet {
+    padding: 86px 50px 57px;
+  }
+}
