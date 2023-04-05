@@ -1,1 +1,184 @@
 @use "../global/use.scss";
+
+.form {
+  display: block;
+}
+
+.form__head {
+  background-color: use.$color-footer-gray;
+  position: relative;
+
+  @include use.media-mobile-only {
+    padding: 72px 30px 74px;
+    margin-bottom: 17px;
+  }
+
+  @include use.media-tablet {
+    padding: 33px 50px 72px;
+    margin-bottom: 70px;
+  }
+}
+
+.form__head::after {
+  @include use.media-tablet {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    background-image: url("../img/svg/tab-fat-wave.svg");
+    background-repeat: repeat-x;
+    background-size: 38.5px;
+    left: -1px;
+    right: 0;
+    bottom: -14px;
+    height: 24px;
+  }
+
+  @include use.media-desktop {
+    background-image: url("../img/svg/desk-fat-wave.svg");
+    background-repeat: repeat-x;
+    background-size: 62.5px;
+    left: 13px;
+    right: 0;
+    bottom: -19px;
+    height: 34px;
+  }
+}
+
+.form__head-title {
+  margin: 0;
+  color: use.$color-black;
+  text-align: center;
+
+  @include use.media-mobile-only {
+    @include use.font-bold-27;
+    line-height: 30px;
+  }
+
+  @include use.media-tablet {
+    @include use.font-bold-43;
+    line-height: 50px;
+    position: relative;
+  }
+}
+
+.form__head-text {
+  margin: 0;
+
+  @include use.media-mobile-only {
+    @include use.font-lite-13;
+    padding: 0 30px;
+    margin-bottom: 31px;
+  }
+
+  @include use.media-tablet {
+    @include use.font-lite-17;
+    line-height: 30px;
+    padding: 0 50px;
+    margin-bottom: 63px;
+  }
+}
+
+.form__pattern {
+  display: block;
+  background-color: use.$color-lite-gray;
+
+  @include use.media-mobile-only {
+    @include use.font-bold-17;
+    line-height: 18px;
+  }
+}
+
+.form__fieldset {
+  position: relative;
+  border: 0;
+  padding: 0;
+  margin: 0;
+
+  @include use.media-mobile-only {
+    padding: 34px 30px;
+  }
+}
+
+.form__fieldset::before {
+  @include use.media-mobile-only {
+    content: "";
+    position: absolute;
+    height: 1px;
+    top: -10px;
+    right: 0;
+    background-color: use.$color-active-mint;
+    width: calc(100% - 90px);
+  }
+}
+
+.form__legend {
+  color: use.$color-light-mint;
+  text-transform: uppercase;
+  padding: 0;
+
+  @include use.media-mobile-only {
+    @include use.font-bold-17;
+    line-height: 16px;
+    max-width: 58px;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.form__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__list--radio-group {
+  @include use.media-mobile-only {
+    row-gap: 24px;
+  }
+}
+
+.form__item {
+  position: relative;
+}
+
+.form__item-label {
+  cursor: pointer;
+  display: inline-block;
+
+  @include use.media-mobile-only {
+    max-width: 155px;
+  }
+
+  &--radio {
+    @include use.media-mobile-only {
+      padding-left: 60px;
+    }
+  }
+
+  &--radio::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 35.5px;
+    height: 35.5px;
+    border: 2px solid use.$color-gray;
+    border-radius: 50%;
+  }
+
+  &--radio::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    width: 17px;
+    height: 17px;
+    background-color: use.$color-active-mint;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+}
