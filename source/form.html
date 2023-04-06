@@ -80,12 +80,12 @@
 
       <form class="form__pattern" action="https://echo.htmlacademy.ru" method="POST" target="_blank">
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--radio">
           <legend class="form__legend">Тип</legend>
-          <ul class="form__list form__list--radio-group form__list--border">
+          <ul class="form__list form__list--radio">
             <li class="form__item form__item--radio">
               <input class="form__item-input-radio visually-hidden" type="radio" name="type" id="radio-1" value="accessory" checked="checked">
-              <label class="form__item-label form__item-label--radio" for="radio-1">Аксессуар для интерьера</label>
+              <label class="form__item-label form__item-label--radio" for="radio-1">Аксессуар для интерьера&nbsp;&nbsp;</label>
             </li>
             <li class="form__item form__item--radio">
               <input class="form__item-input-radio visually-hidden" type="radio" name="type" id="radio-2" value="child-toy">
@@ -94,9 +94,9 @@
           </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--checkbox">
             <legend class="form__legend">Цвет</legend>
-            <ul class="form__list form__list--extra">
+            <ul class="form__list form__list--checkbox">
               <li class="form__item form__item--checkbox">
               <input class="form__item-input-checkbox visually-hidden" type="checkbox" name="color" id="checkbox-1" value="цршеу" checked="checked">
               <label class="form__item-label form__item-label--checkbox" for="checkbox-1">Белый</label>
@@ -124,43 +124,47 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--name">
           <legend class="form__legend">ФИО</legend>
-          <ul class="form__list form__list--text-group">
-            <li class="form__item"><label class="form__item-label" for="name">Имя</label> <input
-                class="form__item__input-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required="">
+          <ul class="form__list form__list--name">
+            <li class="form__item-name">
+              <label class="form__item-label form__item-label--name" for="name">Имя:</label>
+              <input class="form__item__input-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required="">
             </li>
-            <li class="form__item"><label class="form__item-label" for="surname">Фамилия</label> <input
-                class="form__item__input-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required="">
+            <li class="form__item-name">
+              <label class="form__item-label form__item-label--name" for="surname">Фамилия:</label>
+              <input class="form__item__input-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required="">
             </li>
-            <li class="form__item"><label class="form__item-label" for="patronymic">Отчество</label> <input
-                class="form__item__input-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете"></li>
+            <li class="form__item-name">
+              <label class="form__item-label form__item-label--name" for="patronymic">Отчество:</label>
+              <input class="form__item__input-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+            </li>
           </ul>
         </fieldset>
 <div class="666">
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--phone">
           <legend class="form__legend">Тел</legend>
-          <label class="form__item-label form__item-label--tel" for="tel">
+          <label class="form__item-label form__item-label--phone" for="phone">
           <input class="form__item__input-text form__item__input-text--phone" pattern="\+?[0-9\s\-\(\)]+"
-            type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required="">
+            type="tel" name="tel" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required="">
             <svg class="form__item__icon-phone" aria-hidden="true" focusable="false" width="15" height="16">
             <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
           </svg></label>
 </fieldset>
 
-<fieldset class="form__fieldset">
+<fieldset class="form__fieldset form__fieldset--email">
 <legend class="form__legend">E-mail</legend>
             <label class="form__item-label form__item-label--email" for="email">
-            <input class="form__item__input-text form__item__input-text--mail" type="email" name="email" id="email" placeholder="Ваш Email*" required="">
-                <svg class="form__item__icon-mail" width="18" height="14">
+            <input class="form__item__input-text form__item__input-text--email" type="email" name="email" id="email" placeholder="Ваш Email*" required="">
+                <svg class="form__item__icon-email" width="18" height="14">
                 <use xlink:href="img/svg/sprite.svg#icon-mail"></use>
               </svg></label>
         </fieldset>
       </div>
 
-        <fieldset class="form__fieldset">
-          <legend class="form__legend form__legend--comment">Доп</legend><textarea class="form__textarea"
-            name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <fieldset class="form__fieldset form__fieldset--textarea">
+          <legend class="form__legend form__legend--textarea">Доп</legend>
+          <textarea class="form__textarea" name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
 
 

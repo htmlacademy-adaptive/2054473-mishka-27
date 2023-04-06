@@ -94,10 +94,6 @@
   border: 0;
   padding: 0;
   margin: 0;
-
-  @include use.media-mobile-only {
-    padding: 34px 30px;
-  }
 }
 
 .form__fieldset::before {
@@ -106,9 +102,51 @@
     position: absolute;
     height: 1px;
     top: -10px;
-    right: 0;
+    right: 30px;
     background-color: use.$color-active-mint;
-    width: calc(100% - 90px);
+    width: calc(100% - 120px);
+  }
+}
+
+.form__fieldset--email::before {
+  @include use.media-mobile-only {
+    width: calc(100% - 138px);
+  }
+}
+
+.form__fieldset--radio {
+  @include use.media-mobile-only {
+    padding: 34px 30px 38px;
+  }
+}
+
+.form__fieldset--checkbox {
+  @include use.media-mobile-only {
+    padding: 29px 30px 33px;
+  }
+}
+
+.form__fieldset--name {
+  @include use.media-mobile-only {
+    padding: 27px 30px 36px;
+  }
+}
+
+.form__fieldset--phone {
+  @include use.media-mobile-only {
+    padding: 2px 30px 18px;
+  }
+}
+
+.form__fieldset--email {
+  @include use.media-mobile-only {
+    padding: 2px 30px 18px;
+  }
+}
+
+.form__fieldset--textarea {
+  @include use.media-mobile-only {
+    padding: 21px 30px 7px;
   }
 }
 
@@ -135,9 +173,21 @@
   list-style: none;
 }
 
-.form__list--radio-group {
+.form__list--radio {
   @include use.media-mobile-only {
-    row-gap: 24px;
+    row-gap: 17px;
+  }
+}
+
+.form__list--checkbox {
+  @include use.media-mobile-only {
+    row-gap: 27px;
+  }
+}
+
+.form__list--name {
+  @include use.media-mobile-only {
+    row-gap: 22px;
   }
 }
 
@@ -147,15 +197,15 @@
 
 .form__item-label {
   cursor: pointer;
-  display: inline-block;
-
-  @include use.media-mobile-only {
-    max-width: 155px;
-  }
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
 
   &--radio {
     @include use.media-mobile-only {
       padding-left: 60px;
+      min-height: 31px;
     }
   }
 
@@ -170,15 +220,120 @@
     border-radius: 50%;
   }
 
-  &--radio::after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 12px;
-    width: 17px;
-    height: 17px;
-    background-color: use.$color-active-mint;
-    border-radius: 50%;
-    box-sizing: border-box;
+  &--checkbox {
+    @include use.media-mobile-only {
+      padding-left: 60px;
+      min-height: 34px;
+      top: -3px;
+    }
+  }
+
+  &--phone,
+  &--email {
+    @include use.media-mobile-only {
+      display: block;
+    }
+  }
+}
+
+.form__item-input-radio:checked+.form__item-label--radio::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  width: 17px;
+  height: 17px;
+  background-color: use.$color-active-mint;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.form__item-input-checkbox+.form__item-label--checkbox::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border: 2px solid use.$color-gray;
+  box-sizing: border-box;
+
+  @include use.media-tablet {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.form__item-input-checkbox:checked+.form__item-label--checkbox::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+
+  @include use.media-mobile-only {
+    top: 8px;
+    left: 7px;
+    width: 24px;
+    height: 16px;
+    background-image: url("../img/svg/mob-checkbox.svg");
+  }
+
+  @include use.media-tablet {
+    top: 5px;
+    left: 8px;
+    width: 24px;
+    height: 19px;
+    background-image: url("../img/svg/tab-checkbox.svg");
+  }
+}
+
+
+.form__item-name {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  @include use.media-mobile-only {
+    column-gap: 13px;
+  }
+}
+
+.form__item__input-text {
+  margin: 0;
+  color: use.$color-gray;
+  border: 0;
+  border-bottom: 2px solid use.$color-black;
+  background-color: transparent;
+  position: relative;
+
+  @include use.media-mobile-only {
+    @include use.font-lite-17;
+    line-height: 18px;
+    padding: 17px 0 15px;
+  }
+
+  &--phone {
+    width: 100%;
+    padding: 15px 0 17px;
+  }
+
+  &--email {
+    width: 100%;
+    padding: 17px 0 15.5px;
+  }
+}
+
+.form__textarea {
+  border: 2px solid use.$color-gray;
+  resize: none;
+  outline: 0;
+  box-sizing: border-box;
+
+  @include use.media-mobile-only {
+    @include use.font-lite-17;
+    line-height: 18px;
+    padding: 16px 14px;
+    min-height: 142px;
+    width: 100%;
   }
 }
