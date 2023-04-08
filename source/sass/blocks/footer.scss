@@ -23,6 +23,10 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @include use.media-desktop {
+    padding: 51px 50px;
+  }
 }
 
 .footer__logo-link-box {
@@ -110,7 +114,6 @@
   }
 }
 
-
 .footer__created-link-box {
   display: flex;
   color: use.$color-black;
@@ -132,6 +135,13 @@
 
   @include use.media-desktop {
     column-gap: 28px;
+  }
+
+  &--form {
+    @include use.media-desktop {
+      top: -4px;
+      left: -2px;
+    }
   }
 
   &:hover>.footer__created-ico,

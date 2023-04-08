@@ -98,7 +98,7 @@
             <legend class="form__legend form__legend--checkbox">Цвет</legend>
             <ul class="form__list form__list--checkbox">
               <li class="form__item form__item--checkbox">
-              <input class="form__item-input-checkbox visually-hidden" type="checkbox" name="color" id="checkbox-1" value="white" checked="checked">
+              <input class="form__item-input-checkbox visually-hidden" type="checkbox" name="color" id="checkbox-1" value="white" checked="checked" disabled>
               <label class="form__item-label form__item-label--checkbox" for="checkbox-1">Белый</label>
             </li>
               <li class="form__item form__item--checkbox">
@@ -129,15 +129,15 @@
           <ul class="form__list form__list--name">
             <li class="form__item-name">
               <label class="form__item-label form__item-label--name" for="name">Имя:</label>
-              <input class="form__item__input-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required="">
+              <input class="form__item-input-text" type="text" name="name" id="name" placeholder="Введите ваше имя*" required="">
             </li>
             <li class="form__item-name">
               <label class="form__item-label form__item-label--name" for="surname">Фамилия:</label>
-              <input class="form__item__input-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required="">
+              <input class="form__item-input-text" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required="">
             </li>
             <li class="form__item-name">
               <label class="form__item-label form__item-label--name" for="patronymic">Отчество:</label>
-              <input class="form__item__input-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+              <input class="form__item-input-text" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </li>
           </ul>
         </fieldset>
@@ -145,9 +145,9 @@
         <fieldset class="form__fieldset form__fieldset--phone">
           <legend class="form__legend form__legend--phone">Тел</legend>
           <label class="form__item-label form__item-label--phone" for="phone">
-          <input class="form__item__input-text form__item__input-text--phone" pattern="\+?[0-9\s\-\(\)]+"
+          <input class="form__item-input-text form__item-input-text--phone" pattern="\+?[0-9\s\-\(\)]+"
             type="tel" name="tel" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required="">
-            <svg class="form__item__icon-phone" aria-hidden="true" focusable="false" width="25" height="24">
+            <svg class="form__item-icon-phone" aria-hidden="true" focusable="false" width="25" height="24">
             <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
           </svg></label>
 </fieldset>
@@ -155,8 +155,8 @@
 <fieldset class="form__fieldset form__fieldset--email">
 <legend class="form__legend form__legend--email">E-mail</legend>
             <label class="form__item-label form__item-label--email" for="email">
-            <input class="form__item__input-text form__item__input-text--email" type="email" name="email" id="email" placeholder="Ваш Email*" required="">
-                <svg class="form__item__icon-email" width="32" height="21">
+            <input class="form__item-input-text form__item-input-text--email" type="email" name="email" id="email" placeholder="Ваш Email*" required="">
+                <svg class="form__item-icon-email" width="32" height="21">
                 <use xlink:href="img/svg/sprite.svg#icon-mail"></use>
               </svg></label>
         </fieldset>
@@ -213,7 +213,7 @@
           </a>
         </li>
       </ul>
-        <a class="footer__created-link-box" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+        <a class="footer__created-link-box footer__created-link-box--form" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
           aria-label="Сайт HTML Academy.">
           <span class="footer__created-text">Разработано</span>
           <svg class="footer__created-ico" width="27" height="35" role="img">
