@@ -193,6 +193,7 @@
       order: 2;
       width: 321px;
       row-gap: 20px;
+      align-self: stretch;
     }
 
     @include use.media-desktop {
@@ -325,7 +326,7 @@
       left: 3px;
       order: 3;
       column-gap: 61.5px;
-      align-self: center;
+      align-self: stretch;
       min-height: 25px;
       min-width: 400px;
       max-width: 615px;
@@ -519,10 +520,10 @@
   @include use.media-tablet {
     display: block;
     position: relative;
-    margin: 0;
     order: 2;
     top: -1px;
     line-height: 24px;
+    margin: 20px 0;
     max-width: 345px;
   }
 
@@ -530,7 +531,7 @@
     order: 4;
     top: auto;
     left: 1px;
-    padding: 21px 0;
+    margin: 21px 0;
     max-width: 350px;
     align-self: center;
   }
