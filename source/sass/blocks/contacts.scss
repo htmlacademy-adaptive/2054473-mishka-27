@@ -2,15 +2,14 @@
 
 .contacts {
   display: block;
-  max-width: 1150px;
-  margin: 0 auto;
 
   @include use.media-mobile-only {
     margin-bottom: 39px;
   }
 
   @include use.media-desktop {
-    // width: 1150px;
+    max-width: 1150px;
+    margin: 0 auto;
     position: relative;
     margin-bottom: 105px;
   }
@@ -189,7 +188,8 @@
 .contacts__map {
   border: 0;
   display: block;
-  width: 100vw;
+  // width: 100vw;
+  width: 100%;
 
   @include use.media-tablet {
     height: 457px;

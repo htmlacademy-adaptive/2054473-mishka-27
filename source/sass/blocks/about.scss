@@ -11,11 +11,11 @@
   }
 
   @include use.media-tablet {
-    margin-bottom: 60px;
+    margin-bottom: 32px;
   }
 
   @include use.media-desktop {
-    margin-bottom: 67px;
+    margin-bottom: 39px;
   }
 }
 
@@ -68,16 +68,17 @@
   color: use.$color-black;
 
   @include use.media-tablet {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 28px;
-    column-gap: 35px;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // row-gap: 28px;
+    column-gap: 0;
+    column-count: 2;
   }
 
-  @include use.media-desktop {
-    column-gap: 50px;
-  }
+  // @include use.media-desktop {
+  //   column-gap: 50px;
+  // }
 }
 
 .about__item {
@@ -95,42 +96,13 @@
     @include use.font-bold-20;
     line-height: 22px;
     width: 300px;
+    display: inline-block;
+    margin-bottom: 28px;
+    margin-right: 35px;
   }
-}
 
-.about__item--ecology {
-  @include use.media-tablet {
-    order: 0;
-  }
-}
-
-.about__item--style {
-  @include use.media-tablet {
-    order: 2;
-  }
-}
-
-.about__item--likes {
-  @include use.media-tablet {
-    order: 4;
-  }
-}
-
-.about__item--handmade {
-  @include use.media-tablet {
-    order: 1;
-  }
-}
-
-.about__item--support {
-  @include use.media-tablet {
-    order: 3;
-  }
-}
-
-.about__item--gift {
-  @include use.media-tablet {
-    order: 5;
+  @include use.media-desktop {
+    margin-right: 50px;
   }
 }
 
