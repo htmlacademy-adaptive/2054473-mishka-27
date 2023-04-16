@@ -739,6 +739,7 @@
   @include use.media-tablet {
     @include use.font-lite-17;
     line-height: 30px;
+    max-width: 310px;
   }
 }
 
