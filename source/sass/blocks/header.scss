@@ -11,5 +11,6 @@
 
   @include use.media-tablet {
     background-color: use.$color-white;
+    overflow-x: hidden;
   }
 }

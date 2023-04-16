@@ -114,7 +114,7 @@
   @include use.media-tablet {
     margin-left: 25px;
     grid-column-start: auto;
-    min-width: 255px;
+    // min-width: 255px;
   }
 
   @include use.media-desktop {
