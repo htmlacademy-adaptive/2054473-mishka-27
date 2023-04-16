@@ -178,6 +178,7 @@
     right: 49px;
     width: 527px;
     background-image: url("../img/web-desk-map.webp");
+    height: 100%;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/web-desk-map@2x.webp");
@@ -188,15 +189,16 @@
 .contacts__map {
   border: 0;
   display: block;
-  // width: 100vw;
   width: 100%;
 
   @include use.media-tablet {
     height: 457px;
+
   }
 
   @include use.media-desktop {
     width: 527px;
+    height: 100%;
   }
 }
 
