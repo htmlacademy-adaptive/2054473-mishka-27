@@ -1,0 +1,208 @@
+@use "../global/use.scss";
+
+.about {
+  display: block;
+  max-width: 1150px;
+  margin: 0 auto;
+  position: relative;
+
+  @include use.media-mobile-only {
+    margin-bottom: 36px;
+  }
+
+  @include use.media-tablet {
+    margin-bottom: 32px;
+  }
+
+  @include use.media-desktop {
+    margin-bottom: 39px;
+  }
+}
+
+.about__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+
+  @include use.media-mobile-only {
+    padding: 0 30px;
+  }
+
+  @include use.media-tablet {
+    padding: 0 50px;
+  }
+
+  @include use.media-desktop {
+    padding: 0 225px;
+  }
+}
+
+.about__title {
+  margin: 0;
+  color: use.$color-black;
+
+  @include use.media-mobile-only {
+    @include use.font-bold-25;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  @include use.media-tablet {
+    @include use.font-bold-43;
+    line-height: 50px;
+    margin-bottom: 36px;
+  }
+
+  @include use.media-desktop {
+    @include use.font-bold-53;
+    line-height: 57px;
+    margin-bottom: 34px;
+  }
+}
+
+.about__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: use.$color-black;
+
+  @include use.media-tablet {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // row-gap: 28px;
+    column-gap: 0;
+    column-count: 2;
+  }
+
+  // @include use.media-desktop {
+  //   column-gap: 50px;
+  // }
+}
+
+.about__item {
+  position: relative;
+  padding: 0;
+  padding-top: 61px;
+  padding-bottom: 22px;
+
+  @include use.media-mobile-only {
+    @include use.font-bold-17;
+    line-height: 20px;
+  }
+
+  @include use.media-tablet {
+    @include use.font-bold-20;
+    line-height: 22px;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: 28px;
+    margin-right: 35px;
+  }
+
+  @include use.media-desktop {
+    margin-right: 50px;
+  }
+}
+
+.about__item--ecology::before {
+  content: "";
+  position: absolute;
+  width: 33px;
+  height: 38px;
+  top: 7px;
+  left: 8px;
+  background: url("../img/svg/about-ecology.svg");
+
+  @include use.media-tablet {
+    top: 5px;
+  }
+}
+
+.about__item--style::before {
+  content: "";
+  position: absolute;
+  width: 47px;
+  height: 27px;
+  top: 8px;
+  left: 0;
+  background: url("../img/svg/about-style.svg");
+
+  @include use.media-tablet {
+    top: 7px;
+    left: 1px;
+  }
+}
+
+.about__item--likes::before {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 27px;
+  top: 13px;
+  left: 7px;
+  background: url("../img/svg/about-likes.svg");
+
+  @include use.media-tablet {
+    top: 12px;
+    left: 8px;
+  }
+}
+
+.about__item--handmade::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 34px;
+  top: 10px;
+  left: 3px;
+  background: url("../img/svg/about-handmade.svg");
+
+  @include use.media-tablet {
+    top: 9px;
+    left: 2px;
+  }
+
+  @include use.media-desktop {
+    left: 3px;
+  }
+}
+
+.about__item--support::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 23px;
+  top: 11px;
+  left: -6px;
+  background: url("../img/svg/about-support.svg");
+
+  @include use.media-tablet {
+    top: 10px;
+    left: -7px;
+  }
+
+  @include use.media-desktop {
+    left: -6px;
+  }
+}
+
+.about__item--gift::before {
+  content: "";
+  position: absolute;
+  width: 33px;
+  height: 32px;
+  top: 9px;
+  left: 3px;
+  background: url("../img/svg/about-gift.svg");
+
+  @include use.media-tablet {
+    top: 8px;
+    left: 2px;
+  }
+
+  @include use.media-desktop {
+    left: 3px;
+  }
+}

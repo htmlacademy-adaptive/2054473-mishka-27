@@ -1,0 +1,219 @@
+@use "../global/use.scss";
+
+.contacts {
+  display: block;
+
+  @include use.media-mobile-only {
+    margin-bottom: 39px;
+  }
+
+  @include use.media-desktop {
+    max-width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 105px;
+  }
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+
+  @include use.media-mobile-only {
+    padding: 0 30px 0 29px;
+  }
+
+  @include use.media-tablet {
+    padding: 86px 50px 57px;
+  }
+
+  @include use.media-desktop {
+    padding: 79px 613px 0 224px;
+    position: initial;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  color: use.$color-black;
+
+  @include use.media-mobile-only {
+    @include use.font-bold-25;
+    line-height: 30px;
+    margin-bottom: 26px;
+  }
+
+  @include use.media-tablet {
+    @include use.font-bold-43;
+    line-height: 50px;
+    margin-bottom: 49px;
+    position: relative;
+  }
+
+  @include use.media-desktop {
+    @include use.font-bold-53;
+    line-height: 57px;
+    margin-bottom: 35px;
+    width: 310px;
+  }
+}
+
+.contacts__title::after {
+  @include use.media-tablet {
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: -23px;
+    width: 47px;
+    height: 81px;
+    background: url("../img/svg/contacts-flag.svg");
+  }
+
+  @include use.media-desktop {
+    left: -111px;
+    top: -17px;
+  }
+}
+
+.contacts__list {
+  line-height: 30px;
+  box-sizing: border-box;
+  display: grid;
+  margin: 0;
+
+  @include use.media-mobile-only {
+    @include use.font-lite-14;
+    column-gap: 34px;
+    row-gap: 30px;
+    margin-bottom: 63px;
+  }
+
+  @include use.media-tablet {
+    @include use.font-lite-17;
+    grid-template-columns: max-content 1fr max-content 1fr;
+    column-gap: 0;
+    row-gap: 0;
+    margin-bottom: 48px;
+  }
+
+  @include use.media-desktop {
+    align-content: start;
+    row-gap: 30px;
+    column-gap: 22px;
+    grid-template-columns: 18% 74%;
+    margin-bottom: 84px;
+  }
+}
+
+.contacts__description {
+  margin-left: 0;
+  grid-column-start: 2;
+
+  @include use.media-tablet {
+    margin-left: 25px;
+    grid-column-start: auto;
+    // min-width: 255px;
+  }
+
+  @include use.media-desktop {
+    min-width: auto;
+    margin: 0;
+  }
+}
+
+.contacts__email {
+  padding-bottom: 2.5px;
+  text-decoration: none;
+  color: use.$color-gray;
+  border-bottom: 1px solid use.$color-active-mint;
+
+  @include use.media-desktop {
+    padding-bottom: 7.5px;
+  }
+
+  &:hover,
+  &:focus {
+    color: use.$color-thing-second;
+    outline: none;
+  }
+
+  &:active {
+    border-color: rgba(70, 193, 174, 0.3);
+  }
+}
+
+.contacts__box-map {
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include use.media-mobile-only {
+    margin: 0 -30px 41px;
+    height: 455px;
+    background-image: url("../img/web-mob-map.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/web-mob-map@2x.webp");
+    }
+  }
+
+  @include use.media-tablet {
+    margin: 0 -50px 56px;
+    height: 457px;
+    background-image: url("../img/web-tab-map.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/web-tab-map@2x.webp");
+    }
+  }
+
+  @include use.media-desktop {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 49px;
+    width: 527px;
+    background-image: url("../img/web-desk-map.webp");
+    height: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/web-desk-map@2x.webp");
+    }
+  }
+}
+
+.contacts__map {
+  border: 0;
+  display: block;
+  width: 100%;
+
+  @include use.media-tablet {
+    height: 457px;
+
+  }
+
+  @include use.media-desktop {
+    width: 527px;
+    height: 100%;
+  }
+}
+
+.contacts__btn {
+  display: block;
+  padding: 14px 50px;
+
+  @include use.media-tablet {
+    @include use.font-bold-17;
+    padding: 14px 39px;
+    align-self: center;
+  }
+
+  @include use.media-desktop {
+    // max-width: 149px;
+    align-self: start;
+  }
+}
