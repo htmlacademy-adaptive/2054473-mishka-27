@@ -68,17 +68,9 @@
   color: use.$color-black;
 
   @include use.media-tablet {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // row-gap: 28px;
     column-gap: 0;
     column-count: 2;
   }
-
-  // @include use.media-desktop {
-  //   column-gap: 50px;
-  // }
 }
 
 .about__item {

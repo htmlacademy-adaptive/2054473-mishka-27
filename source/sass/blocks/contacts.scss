@@ -114,13 +114,16 @@
   @include use.media-tablet {
     margin-left: 25px;
     grid-column-start: auto;
-    // min-width: 255px;
   }
 
   @include use.media-desktop {
     min-width: auto;
     margin: 0;
   }
+}
+
+.contacts__termin {
+  max-width: 60px;
 }
 
 .contacts__email {
@@ -193,7 +196,6 @@
 
   @include use.media-tablet {
     height: 457px;
-
   }
 
   @include use.media-desktop {
@@ -213,7 +215,6 @@
   }
 
   @include use.media-desktop {
-    // max-width: 149px;
     align-self: start;
   }
 }

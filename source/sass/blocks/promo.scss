@@ -23,6 +23,7 @@
   flex-direction: column;
   border: 1px solid use.$color-lite-gray;
   transition: all 0.3s ease-in-out;
+  position: relative;
 
   @include use.media-mobile-only {
     padding: 0 32px 32px;
@@ -37,12 +38,37 @@
     padding: 96px 56px 59px 761px;
   }
 
-  &:hover,
-  &:focus {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    @include use.media-tablet {
+      top: unset;
+      bottom: 0;
+      height: calc(100% - 455px);
+    }
+
+    @include use.media-desktop {
+      top: 0;
+      right: 0;
+      bottom: unset;
+      left: unset;
+      width: calc(100% - 682px);
+      height: 100%;
+    }
   }
 
-  &:active {
+  &:hover::before {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus-within::before {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }

@@ -116,6 +116,7 @@
 
   @include use.media-tablet {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
 }
@@ -149,7 +150,7 @@
   background-color: use.$color-light-mint;
 
   @include use.media-mobile-only {
-    padding: 23px 27px 32px 30px;
+    padding: 23px 90px 32px 30px;
   }
 
   @include use.media-tablet {
@@ -178,14 +179,13 @@
   background-color: use.$color-dark-mint;
 
   @include use.media-mobile-only {
-    padding: 23px 27px 32px 30px;
+    padding: 23px 90px 32px 30px;
   }
 
   @include use.media-tablet {
     padding: 26px 131px 31px 36px;
     box-shadow: 0 10px use.$color-dark-mint;
   }
-
 
   &:hover,
   &:focus {
