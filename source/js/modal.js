@@ -1,4 +1,4 @@
-var cardPrices = document.querySelectorAll('.modal__open');
+var cardPrices = document.querySelectorAll('.open');
 var modal = document.querySelector('.modal');
 var modalWrapper = document.querySelector('.modal__wrapper');
 

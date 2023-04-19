@@ -30,7 +30,6 @@
 }
 
 .footer__logo-link-box {
-
   @include use.media-mobile-only {
     display: none;
   }
@@ -40,8 +39,8 @@
     outline: none;
   }
 
-  &:hover>.footer__logo,
-  &:focus-within>.footer__logo {
+  &:hover > .footer__logo,
+  &:focus-within > .footer__logo {
     color: use.$color-thing-second;
   }
 
@@ -144,12 +143,12 @@
     }
   }
 
-  &:hover>.footer__created-ico,
-  &:focus>.footer__created-ico {
+  &:hover > .footer__created-ico,
+  &:focus > .footer__created-ico {
     color: use.$color-thing-second;
   }
 
-  &:active>.footer__created-ico {
+  &:active > .footer__created-ico {
     opacity: 0.3;
   }
 }
